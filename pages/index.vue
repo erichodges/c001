@@ -20,7 +20,7 @@
           </a>          
         </div>
       <!-- </div> -->
-      <div class="down-arrow-div ">
+      <div class="down-arrow-div">
         <a href="#" v-scroll-to="'#section-2'">
           <svg class="down-arrow bounce" fill="#FFFFFF" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
           <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
@@ -134,10 +134,12 @@ export default {
 
 .down-arrow-div {
   padding-top: 7rem;
+  /* z-index: 100; */
 }
 
 .down-arrow {
   fill: #c1c1c4;
+  /* z-index: 100; */
 
   /* &:hover {
     transform: translateY(5px);
@@ -146,6 +148,11 @@ export default {
   } */
 }
 
+.down-arrow:hover {
+    transform: translateY(5px);
+    transition: transform .25s;
+    fill: #fff;
+}
 
 
 /* SECTION 2 */
@@ -155,6 +162,7 @@ export default {
   margin-top: 0;
   margin-bottom: 0;
   background-color: #4670e4; 
+  z-index: 10;
 }
 
 .section-3 {

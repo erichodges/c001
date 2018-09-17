@@ -30,6 +30,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    cssSourceMap: false,
     babel: {
       plugins: [
         ['transform-imports', {
@@ -40,7 +41,7 @@ module.exports = {
         }]
       ]
     },
-    vendor: [
+    vendor: [      
       '~/plugins/vuetify.js'
     ],
     extractCSS: true,

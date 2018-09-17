@@ -6,43 +6,42 @@
 
 <script>
 import axios from 'axios'
-require('dotenv').config()
 
 export default {
-  data() {
+  data () {
     return {
       teachers: []
     }
   },
   components: {
   },
-  mounted() {
+  mounted () {
     this.getData()
-    console.log(process.env.title);
   },
   methods: {
-    onConvert(data) {
-      let keys = data[0];
-      let values = data.slice(1);
-      let object = {};
+    onConvert (data) {
+      let keys = data[0]
+      let values = data.slice(1)
+      let object = {}
       let objects = values.map(array => {
-        object = {};
+        object = {}
 
-        keys.forEach((key, i) => object[key] = array[i]);
+        keys.forEach((key, i) => object[key] = array[i]) // eslint-disable-line
 
-        return object;
-      });
-      this.teachers = objects;
+        return object
+      })
+      this.teachers = objects
     },
-    getData() {
+    getData () {
       return axios
         .get(`https://sheets.googleapis.com/v4/spreadsheets/1SIfFSp_1In8V_NmIGjVtry-7478OJosu91J_toQT7gs/values/Sheet1?valueRenderOption=FORMATTED_VALUE&key=${process.env.TEACHERS_KEY}`)
         .then(response => {
-          this.onConvert(response.data.values);
-        });
-    },
+          this.onConvert(response.data.values)
+        })
+    }
   }
-};
+}
+console.log(process.env.TEACHERS_KEY)
 </script>
 
 <style>

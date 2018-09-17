@@ -18,6 +18,7 @@ export default {
   },
   mounted() {
     this.getData()
+    console.log(process.env.port);
   },
   methods: {
     onConvert(data) {
@@ -42,7 +43,6 @@ export default {
     },
   }
 };
-console.log(process.env.TEACHERS_KEY);
 </script>
 
 <style>

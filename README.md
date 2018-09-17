@@ -1,4 +1,4 @@
-# nuxt/vuetify scrolling template
+# c001
 
 * axios
 * vue-scrollto

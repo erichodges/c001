@@ -24,7 +24,7 @@ module.exports = {
     '~/assets/style/app.styl'
   ],
   env: {
-    TEACHERS_KEY: process.env.TEACHERS_KEY || 'Default Value'
+    TEACHERS_KEY: process.env.TEACHERS_KEY
   },
   modules: [
     '@nuxtjs/axios',

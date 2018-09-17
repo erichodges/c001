@@ -6,6 +6,7 @@
 
 <script>
 import axios from 'axios'
+// require('dotenv').config();
 
 export default {
   data () {
@@ -17,6 +18,7 @@ export default {
   },
   mounted () {
     this.getData()
+    console.log(process.env.TEACHERS_KEY)
   },
   methods: {
     onConvert (data) {
@@ -41,11 +43,6 @@ export default {
     }
   }
 }
-console.log(process.env.TEACHERS_KEY)
 </script>
-
 <style>
-
 </style>
-
-

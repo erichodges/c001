@@ -22,10 +22,17 @@ module.exports = {
   css: [
     '~/assets/style/app.styl'
   ],
+  env: {
+    TEACHERS_KEY: process.env.TEACHERS_KEY || 'Default Value'
+  },
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/dotenv'
+  ],
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#04d8a7' },
+  loading: { color: '#3B8070' },
   /*
   ** Build configuration
   */
@@ -41,7 +48,8 @@ module.exports = {
         }]
       ]
     },
-    vendor: [      
+    vendor: [
+      'axios',
       '~/plugins/vuetify.js'
     ],
     extractCSS: true,
@@ -50,12 +58,15 @@ module.exports = {
     */
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+        config.node = {
+          fs: 'empty'
+        }
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
       }
       if (ctx.isServer) {
         config.externals = [

@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/dotenv": "^1.1.1",
+    "fs": "0.0.1-security",
     "nuxt": "^1.4.2",
     "vue-scrollto": "^2.11.0",
     "vuetify": "^1.2.2"
@@ -19,6 +21,7 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-imports": "^1.4.1",
+    "dotenv": "^6.0.0",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",

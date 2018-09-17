@@ -1,10 +1,11 @@
+require('dotenv').config();
 const nodeExternals = require('webpack-node-externals')
 const resolve = (dir) => require('path').join(__dirname, dir)
 
 module.exports = {
 
   head: {
-    title: 'nuxt-vuetify-scrolling-template',
+    title: 'c001',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

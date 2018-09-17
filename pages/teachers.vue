@@ -42,6 +42,7 @@ export default {
     },
   }
 };
+console.log(process.env.TEACHERS_KEY);
 </script>
 
 <style>

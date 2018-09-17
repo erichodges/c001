@@ -18,7 +18,7 @@ export default {
   },
   mounted() {
     this.getData()
-    console.log(process.env.port);
+    console.log(process.env.title);
   },
   methods: {
     onConvert(data) {

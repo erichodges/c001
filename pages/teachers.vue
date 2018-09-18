@@ -1,6 +1,22 @@
 <template>
   <div>
-  {{ teachers }}
+    <v-data-table
+    :headers="headers"
+    :items="teachers"
+    hide-actions
+    class="elevation-1 heading-text"
+    :loading="true"
+    >    
+      <template slot="items" slot-scope="props">
+        <td class="table-text">{{ props.item.firstName }}</td>
+        <td class="table-text">{{ props.item.lastName }}</td>
+        <td class="text-xs-left table-text">{{ props.item.instrument }}</td>
+        <td class="text-xs-left table-text">{{ props.item.city }}</td>
+        <td class="text-xs-left table-text">{{ props.item.travel }}</td>
+        <td class="text-xs-left table-text">{{ props.item.phone }}</td>
+        <td class="text-xs-left table-text">{{ props.item.email }}</td>
+      </template>
+    </v-data-table>    
   </div>
 </template>
 
@@ -13,14 +29,22 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      teachers: []
+      teachers: [],
+      headers: [
+        { text: 'First Name', value: 'firstName', class: 'heading-text' },
+        { text: 'Last Name', value: 'lastName' },
+        { text: 'Instrument', value: 'instrument', align: 'left' },
+        { text: 'City', value: 'city', align: 'left' },
+        { text: 'Will Travel?', value: 'travel' },
+        { text: 'Phone', value: 'phone' },
+        { text: 'email', value: 'email' }
+      ]
     }
   },
   components: {
   },
   mounted () {
     this.getData()
-    console.log(process.env.TEACHERS_KEY)
   },
   methods: {
     onConvert (data) {
@@ -46,5 +70,15 @@ export default {
   }
 }
 </script>
-<style>
+
+<style scoped>
+
+  .heading-text {
+    font-size: 2rem !important;
+    font-family: Roboto;
+  }
+  .table-text {
+    font-size: 1rem;
+    font-family: Roboto;
+  }
 </style>

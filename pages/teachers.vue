@@ -4,15 +4,15 @@
     :headers="headers"
     :items="teachers"
     hide-actions
-    class="elevation-1 heading-text"
+    class="elevation-2 heading-text"
     :loading="true"
     >    
       <template slot="items" slot-scope="props">
-        <td class="table-text">{{ props.item.firstName }}</td>
-        <td class="table-text">{{ props.item.lastName }}</td>
         <td class="text-xs-left table-text">{{ props.item.instrument }}</td>
         <td class="text-xs-left table-text">{{ props.item.city }}</td>
         <td class="text-xs-left table-text">{{ props.item.travel }}</td>
+        <td class="table-text">{{ props.item.firstName }}</td>
+        <td class="table-text">{{ props.item.lastName }}</td>                        
         <td class="text-xs-left table-text">{{ props.item.phone }}</td>
         <td class="text-xs-left table-text">{{ props.item.email }}</td>
       </template>
@@ -31,11 +31,11 @@ export default {
     return {
       teachers: [],
       headers: [
-        { text: 'First Name', value: 'firstName', class: 'heading-text' },
-        { text: 'Last Name', value: 'lastName' },
         { text: 'Instrument', value: 'instrument', align: 'left' },
         { text: 'City', value: 'city', align: 'left' },
         { text: 'Will Travel?', value: 'travel' },
+        { text: 'First Name', value: 'firstName', class: 'heading-text' },
+        { text: 'Last Name', value: 'lastName', class: 'heading-text' },
         { text: 'Phone', value: 'phone' },
         { text: 'email', value: 'email' }
       ]
@@ -76,6 +76,7 @@ export default {
   .heading-text {
     font-size: 2rem !important;
     font-family: Roboto;
+    margin: 2rem;
   }
   .table-text {
     font-size: 1rem;

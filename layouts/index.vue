@@ -1,5 +1,5 @@
 <template>
-  <v-app light>
+  <v-app dark>
     <v-navigation-drawer dark class="drawer"
       :mini-variant.sync="miniVariant"
       :clipped="clipped"
@@ -13,49 +13,36 @@
      
       <v-list>
         <v-icon class="burger-drawer" @click="drawer = !drawer">close</v-icon>
-
-        <!-- <v-toolbar-side-icon class="burger-drawer" @click="drawer = !drawer"></v-toolbar-side-icon> -->
-
         <ul class="sidenav-ul">
-          
           <li v-scroll-to="'#section-2'" class="sidenav-link-style">Products</li>  
           <li v-scroll-to="'#section-3'" class="sidenav-link-style">About</li>
           <li v-scroll-to="'#section-4'" class="sidenav-link-style">Contact</li>
         </ul>
-        <!-- <v-list-tile>
-          <v-list-tile-content>
-            <v-list-tile-title class="sidenav-link-style" v-scroll-to="'#section-2'" display-2>
-              Section 2
-            </v-list-tile-title>            
-            <v-list-tile-title class="sidenav-link-style" v-scroll-to="'#section-3'" display-2>
-              Section 3
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile> -->
-
       </v-list>            
     </v-navigation-drawer>
 
 <!-- Navigation Toolbar -->
-  
     <v-toolbar  app :clipped-left="true" dense flat color="transparent">
-        <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-side-icon class="burger" @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-btn to="/" color="transparent" flat>
-          <h2 class="black--text">Site Logo</h2></v-btn>
+          <h2 class="white--text">MTAC Marin</h2></v-btn>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="toolbar-items">
-          <v-btn v-scroll-to="'#section-2'" flat color="white"><h3>Products</h3>
-          </v-btn>          
-          <v-btn v-scroll-to="'#section-3'" flat color="white"><h3>About</h3></v-btn>
-          <v-btn v-scroll-to="'#section-4'" flat color="white"><h3>Contact</h3></v-btn>
+          <v-btn nuxt=true to="/about" flat color="white"><h3>About</h3></v-btn>
+          <v-btn nuxt=true to="/teachers" flat color="white"><h3>Teachers</h3></v-btn>
+          <v-btn nuxt=true to="/calendar" flat color="white"><h3>Calendar</h3></v-btn>
+          <v-btn nuxt=true to="/forms-docs" flat color="white"><h3>Forms/Docs</h3></v-btn>
+          <v-btn nuxt=true to="/merit-cert" flat color="white"><h3>Merit Cert</h3></v-btn>
+          <v-btn nuxt=true to="/scholarship" flat color="white"><h3>Scholarship</h3></v-btn>
+          <v-btn nuxt=true to="/media" flat color="white"><h3>Media</h3></v-btn>
           <div class="toolbar-spacer"></div>
         </v-toolbar-items>
     </v-toolbar>  
 <!-- End Navigation Toolbar -->
     <div class="div-with-background">
-      <v-btn v-scroll-to="'#section-1'" class="pageup-btn"
+      <!-- <v-btn v-scroll-to="'#section-1'" class="pageup-btn"
         color="primary"
         dark                   
         fixed
@@ -65,7 +52,7 @@
         fab
       >
         <v-icon>keyboard_arrow_up</v-icon>
-      </v-btn>
+      </v-btn> -->
       <nuxt />
       
       <Footer />
@@ -114,10 +101,14 @@
   }
 }
 
+.burger {
+  color: white;
+}
 @media only screen and (min-width: 56.25em) {
   .burger {
     left: -1rem;
     visibility: hidden !important;
+    /* display: none; */
     width: 0 !important;   
   }
   .v-toolbar__content, .v-toolbar__extension {
@@ -156,7 +147,7 @@
 
 .div-with-background {
   height: 100vh; 
-  background-image: url('~/static/images/1.jpg');      
+  background-image: url('~/static/images/575839.jpg');      
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

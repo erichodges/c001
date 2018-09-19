@@ -1,22 +1,22 @@
 <template>
-  <div>
-    <v-data-table
-    :headers="headers"
-    :items="teachers"
-    hide-actions
-    class="elevation-2 heading-text"
-    :loading="true"
-    >    
-      <template slot="items" slot-scope="props">
-        <td class="text-xs-left table-text">{{ props.item.instrument }}</td>
-        <td class="text-xs-left table-text">{{ props.item.city }}</td>
-        <td class="text-xs-left table-text">{{ props.item.travel }}</td>
-        <td class="table-text">{{ props.item.firstName }}</td>
-        <td class="table-text">{{ props.item.lastName }}</td>                        
-        <td class="text-xs-left table-text">{{ props.item.phone }}</td>
-        <td class="text-xs-left table-text">{{ props.item.email }}</td>
-      </template>
-    </v-data-table>    
+  <div>    
+      <v-data-table
+      :headers="headers"
+      :items="teachers"
+      hide-actions
+      class="elevation-2 heading-text"
+      :loading="true"
+      >    
+        <template slot="items" slot-scope="props">
+          <td class="text-xs-left table-text">{{ props.item.instrument }}</td>
+          <td class="text-xs-left table-text">{{ props.item.city }}</td>
+          <td class="text-xs-left table-text">{{ props.item.travel }}</td>
+          <td class="table-text">{{ props.item.firstName }}</td>
+          <td class="table-text">{{ props.item.lastName }}</td>                        
+          <td class="text-xs-left table-text">{{ props.item.phone }}</td>
+          <td class="text-xs-left table-text">{{ props.item.email }}</td>
+        </template>
+      </v-data-table>
   </div>
 </template>
 
@@ -80,6 +80,6 @@ export default {
   }
   .table-text {
     font-size: 1rem;
-    font-family: Roboto;
+    font-family: Roboto;    
   }
 </style>

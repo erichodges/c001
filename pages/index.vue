@@ -1,8 +1,17 @@
 <template>
-  <main>
-    <section id="section-1" class="section-1">    
-
-    </section>
+  <main class="main">
+        <h1>
+      <span>MTAC</span>
+      <span>marin</span>
+    </h1>
+    <h2 class="MTAC-heading">Music Teachers' Association of California
+      <br> Marin County Branch</h2>
+    <div class="datesandhours">
+      <!-- <h3>10.Januar bis 30.April 1960</h3>
+      <div>Offen: Montag 14-18, 20-22</div>
+      <div>Dienstag-Frietag 10-12, 14-18, 20-22</div>
+      <div>Samstag-Sonnttag 10-12, 14-17</div> -->
+    </div>
   </main>
 </template>
 
@@ -15,124 +24,115 @@ export default {
 
 <style scoped>
 
-.section-1 {
+.main {
   height: 100vh; 
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   overflow:hidden;
 
 }
 
-
-.section-1__heading {
-  display: grid;
-  grid-template-rows: 15rem 15rem 15rem 15rem auto auto auto;
-
+li a {
+    text-decoration: none !important;
 }
 
-.title {
-  font-family: Roboto, sans-serif; 
+.MTAC-heading {
+  color: rgb(240, 239, 233);
+  font-weight: 800;
+  font-size: 1.6rem;
+  
+  line-height: 1.6rem;
+  margin: 0;
+  margin-top: 1rem;
+
   display: block;
-  font-weight: 700;
-  font-size: 8rem;
-  color: #fff;
-  letter-spacing: 1px;
-  grid-row: 5 / 6;
   
+
+  @media only screen and (max-width: 790px) {
+    font-weight: 500;
+    font-size: 1.4rem;
+    display: block;
+
+
+  }
+
+
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 4.2rem;
-  color: #fff;
-  word-spacing: .5rem;
-  padding-bottom: 1.5rem;
-  grid-row: 6 /7;
-}
-
-.links {  
-  padding-top: 2.5rem;
-  grid-row: 7 / 8;
-}
-
-.button--green {  
-  font-size: 1rem;
-  display: inline-block;
-  border-radius: 4px;
+h1 {
+  font-size: calc(2rem + 20vw);
+  letter-spacing: -0.04em;
+  display: contents;
+  opacity: 0.8; }
+  h1 span:nth-of-type(1) {
+    color: rgba(185, 32, 19, 0.7);
+    margin-left: -0.14em; }
+  h1 span:nth-of-type(2) {
+    color: rgba(245, 245, 245, 0.7);
+    margin-left: -0.05em; }
   
-  color: #fff;
-  background-color: #2196F3;
-  text-decoration: none;
-  padding: 10px 30px;
 
-  /* &:hover {
-    
-  } */
-}
+h3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block; }
 
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+main {
+  /* autoprefixer: off */
+  display: grid;
+  grid-template-columns: minmax(10vw, 35vw) -webkit-max-content -webkit-min-content;
+  grid-template-rows: 3vh auto 1fr -webkit-min-content auto 0.5vh;
+  grid-template-columns: minmax(10vw, 35vw) max-content min-content;
+  grid-template-rows: 3vh auto 1fr min-content auto 0.5vh;
+  height: 92vh; 
+  
+    @media only screen and (max-width: 750px) {
+      grid-template-columns: minmax(10vw, 35vw) min-content min-content;
+
+    }
+  
   }
-  40% {
-    transform: translateY(-20px);
+
+h1 span:nth-of-type(1) {
+  /* autoprefixer: off */
+  grid-row: 5;
+  grid-column: 1 / 3; 
+
+  @media only screen and (max-width: 750px) {
+    grid-row: 5;
+    margin-top: 2rem;
   }
-  60% {
-    transform: translateY(-10px);
+
+}
+
+h1 span:nth-of-type(2) {
+  /* autoprefixer: off */
+  grid-row: 5;
+  grid-column: 2 / 4; 
+
+  @media (only screen and (max-width: 750px)) {
+    grid-row: 5;
+    margin-top: 2rem;
   }
 }
 
-.down-arrow-div {
-  padding-top: 7rem;
-  /* z-index: 100; */
-}
+h2 {
+  /* autoprefixer: off */
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: block;
 
-.down-arrow {
-  fill: #c1c1c4;
-  /* z-index: 100; */
+  grid-row: 2;
+  grid-column: 2; }
 
-  /* &:hover {
-    transform: translateY(5px);
-    transition: transform .25s;
-    fill: #fff;
-  } */
-}
-
-.down-arrow:hover {
-    transform: translateY(5px);
-    transition: transform .25s;
-    fill: #fff;
-}
+.datesandhours {
+  /* autoprefixer: off */
+  margin-top: 10rem;
+  grid-row: 5;
+  grid-column: 2; }
 
 
-/* SECTION 2 */
-
-.section-2 {
-  height: 100vh;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #4670e4; 
-  z-index: 10;
-}
-
-.section-3 {
-  height: 100vh;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #63e40d; 
-}
-
-.section-4 {
-  height: 100vh;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #e45846; 
-}
+/* Original CSS */
 
 
 

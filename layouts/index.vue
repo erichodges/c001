@@ -30,7 +30,7 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="toolbar-items">
-          <v-btn nuxt=true to="/about" flat color="white"><h3>About</h3></v-btn>
+          <v-btn nuxt="true" to="/about" flat color="white"><h3>About</h3></v-btn>
           <v-btn nuxt=true to="/teachers" flat color="white"><h3>Teachers</h3></v-btn>
           <v-btn nuxt=true to="/calendar" flat color="white"><h3>Calendar</h3></v-btn>
           <v-btn nuxt=true to="/forms-docs" flat color="white"><h3>Forms/Docs</h3></v-btn>
@@ -87,8 +87,23 @@
 
 
 <style>
-
 /* disable-resize-watcher  - this keeps the app from adding the navigation-drawer on wider screens  */
+
+  * {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Neue Haas Grotesk W01 Disp', Helvetica, sans-serif;
+  line-height: 1;
+  font-size: 100%;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  // text-size-adjust: 100%; 
+}
 
 .v-toolbar__title:not(:first-child) {
       margin-left: 0 !important;
@@ -101,9 +116,6 @@
   }
 }
 
-.burger {
-  color: white;
-}
 @media only screen and (min-width: 56.25em) {
   .burger {
     left: -1rem;
@@ -157,5 +169,6 @@
   #app .v-btn {
     text-transform: none;
   }
+
 
 </style>

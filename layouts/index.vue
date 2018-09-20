@@ -30,29 +30,19 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="toolbar-items">
-          <v-btn nuxt="true" to="/about" flat color="white"><h3>About</h3></v-btn>
-          <v-btn nuxt=true to="/teachers" flat color="white"><h3>Teachers</h3></v-btn>
-          <v-btn nuxt=true to="/calendar" flat color="white"><h3>Calendar</h3></v-btn>
-          <v-btn nuxt=true to="/forms-docs" flat color="white"><h3>Forms/Docs</h3></v-btn>
-          <v-btn nuxt=true to="/merit-cert" flat color="white"><h3>Merit Cert</h3></v-btn>
-          <v-btn nuxt=true to="/scholarship" flat color="white"><h3>Scholarship</h3></v-btn>
-          <v-btn nuxt=true to="/media" flat color="white"><h3>Media</h3></v-btn>
+          <v-btn class="nav-btn" nuxt=true to="/about" flat color="white"><h3>About</h3></v-btn>
+          <v-btn class="nav-btn" nuxt=true to="/teachers" flat color="white"><h3>Teachers</h3></v-btn>
+          <v-btn class="nav-btn" nuxt=true to="/calendar" flat color="white"><h3>Calendar</h3></v-btn>
+          <v-btn class="nav-btn" nuxt=true to="/forms-docs" flat color="white"><h3>Forms/Docs</h3></v-btn>
+          <v-btn class="nav-btn" nuxt=true to="/merit-cert" flat color="white"><h3>Merit Cert</h3></v-btn>
+          <v-btn class="nav-btn" nuxt=true to="/scholarship" flat color="white"><h3>Scholarship</h3></v-btn>
+          <v-btn class="nav-btn" nuxt=true to="/media" flat color="white"><h3>Media</h3></v-btn>
           <div class="toolbar-spacer"></div>
         </v-toolbar-items>
     </v-toolbar>  
 <!-- End Navigation Toolbar -->
     <div class="div-with-background">
-      <!-- <v-btn v-scroll-to="'#section-1'" class="pageup-btn"
-        color="primary"
-        dark                   
-        fixed
-        bottom
-        right
-        nuxt
-        fab
-      >
-        <v-icon>keyboard_arrow_up</v-icon>
-      </v-btn> -->
+
       <nuxt />
       
       <Footer />
@@ -71,10 +61,6 @@
         clipped: true,
         drawer: false,
         fixed: false,
-        items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/' }
-        ],
         miniVariant: false,
         right: false,
         rightDrawer: false,
@@ -102,37 +88,41 @@ html {
   font-kerning: normal;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  // text-size-adjust: 100%; 
+  /* text-size-adjust: 100%;  */
+}
+
+.nav-btn {
+  margin-top: 3px !important;
 }
 
 .v-toolbar__title:not(:first-child) {
       margin-left: 0 !important;
     }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 59em) {
   .toolbar-items {    
     visibility: hidden !important;
+    display: none;
     width: 0 !important;
   }
 }
 
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 59em) {
   .burger {
     left: -1rem;
     visibility: hidden !important;
-    /* display: none; */
+    display: none;
     width: 0 !important;   
   }
   .v-toolbar__content, .v-toolbar__extension {
   padding: 0 !important;
-}
-
   }
+
+}
 
 .toolbar-spacer {
   margin-right: 2rem;
 }
-
 
 .burger-drawer {
   margin-top: 5px;

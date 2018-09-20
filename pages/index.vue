@@ -27,7 +27,6 @@ export default {
 .main {
   height: 100vh; 
   align-items: center;
-  /* text-align: center; */
   overflow:hidden;
 
 }
@@ -36,27 +35,24 @@ li a {
     text-decoration: none !important;
 }
 
+
 .MTAC-heading {
   color: rgb(240, 239, 233);
+  display: block;
   font-weight: 800;
   font-size: 1.6rem;
-  
   line-height: 1.6rem;
   margin: 0;
   margin-top: 1rem;
 
-  display: block;
-  
+  grid-row: 2;
+  grid-column: 2; 
 
   @media only screen and (max-width: 790px) {
     font-weight: 500;
     font-size: 1.4rem;
     display: block;
-
-
   }
-
-
 }
 
 h1 {
@@ -72,10 +68,10 @@ h1 {
     margin-left: -0.05em; }
   
 
-h3 {
+/* h3 {
   font-weight: 500;
   font-size: 1.1rem;
-  display: block; }
+  display: block; } */
 
 main {
   /* autoprefixer: off */
@@ -83,7 +79,7 @@ main {
   grid-template-columns: minmax(10vw, 35vw) -webkit-max-content -webkit-min-content;
   grid-template-rows: 3vh auto 1fr -webkit-min-content auto 0.5vh;
   grid-template-columns: minmax(10vw, 35vw) max-content min-content;
-  grid-template-rows: 3vh auto 1fr min-content auto 0.5vh;
+  grid-template-rows: 10vh auto 1fr min-content auto 0.1vh;
   height: 92vh; 
   
     @media only screen and (max-width: 750px) {
@@ -94,45 +90,37 @@ main {
   }
 
 h1 span:nth-of-type(1) {
+  /* MTAC in Red */
   /* autoprefixer: off */
   grid-row: 5;
   grid-column: 1 / 3; 
+  margin-top: 4rem;
 
   @media only screen and (max-width: 750px) {
-    grid-row: 5;
-    margin-top: 2rem;
+    grid-row: 5;    
   }
 
+  @media only screen and (min-width: 1160px) {
+    margin-top: 20rem;
+    
+  }
 }
 
 h1 span:nth-of-type(2) {
   /* autoprefixer: off */
   grid-row: 5;
   grid-column: 2 / 4; 
+  margin-top: 4rem;
 
   @media (only screen and (max-width: 750px)) {
-    grid-row: 5;
-    margin-top: 2rem;
+    grid-row: 5;    
+  }
+
+  @media only screen and (min-width: 1160px) {
+    margin-top: 20rem;
   }
 }
 
-h2 {
-  /* autoprefixer: off */
-  font-weight: 500;
-  font-size: 1.5rem;
-  display: block;
-
-  grid-row: 2;
-  grid-column: 2; }
-
-.datesandhours {
-  /* autoprefixer: off */
-  margin-top: 10rem;
-  grid-row: 5;
-  grid-column: 2; }
-
-
-/* Original CSS */
 
 
 

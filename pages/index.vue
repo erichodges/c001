@@ -41,7 +41,7 @@ li a {
   display: block;
   font-weight: 800;
   font-size: 1.6rem;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
   margin: 0;
   margin-top: 1rem;
 
@@ -59,26 +59,28 @@ h1 {
   font-size: calc(2rem + 20vw);
   letter-spacing: -0.04em;
   display: contents;
-  opacity: 0.8; }
-  h1 span:nth-of-type(1) {
-    color: rgba(185, 32, 19, 0.7);
-    margin-left: -0.14em; }
-  h1 span:nth-of-type(2) {
-    color: rgba(245, 245, 245, 0.7);
-    margin-left: -0.05em; }
-  
+  opacity: 0.6; 
 
-/* h3 {
-  font-weight: 500;
-  font-size: 1.1rem;
-  display: block; } */
+  /* @media only screen and (min-width: 1400px) {
+    font-size: calc(2rem + 12vw);
+  } */
+}
+h1 span:nth-of-type(1) {
+  color: rgba(185, 32, 19, 0.6);
+  margin-left: -0.14em; 
+}
+h1 span:nth-of-type(2) {
+  color: rgba(245, 245, 245, 0.7);
+  margin-left: -0.05em; 
+}
+
 
 main {
   /* autoprefixer: off */
   display: grid;
-  grid-template-columns: minmax(10vw, 35vw) -webkit-max-content -webkit-min-content;
+  grid-template-columns: minmax(10vw, 25vw) -webkit-max-content -webkit-min-content;
   grid-template-rows: 3vh auto 1fr -webkit-min-content auto 0.5vh;
-  grid-template-columns: minmax(10vw, 35vw) max-content min-content;
+  grid-template-columns: minmax(10vw, 25vw) max-content min-content;
   grid-template-rows: 10vh auto 1fr min-content auto 0.1vh;
   height: 92vh; 
   

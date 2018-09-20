@@ -37,7 +37,7 @@ li a {
 
 
 .MTAC-heading {
-  color: rgb(240, 239, 233);
+  color: rgb(235, 230, 230);
   display: block;
   font-weight: 800;
   font-size: 1.6rem;
@@ -82,9 +82,20 @@ main {
   grid-template-rows: 10vh auto 1fr min-content auto 0.1vh;
   height: 92vh; 
   
-    @media only screen and (max-width: 750px) {
-      grid-template-columns: minmax(10vw, 35vw) min-content min-content;
+    @media only screen and (max-width: 700px) {
+      grid-template-columns: minmax(10vw, 25vw) max-content min-content;
+    }
 
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: minmax(10vw, 20vw) max-content min-content;
+    }
+
+    @media only screen and (max-width: 540px) {
+      grid-template-columns: minmax(10vw, 15vw) max-content min-content;
+    }
+
+    @media only screen and (max-width: 540px) {
+      grid-template-columns: minmax(10vw, 15vw) min-content min-content;
     }
   
   }
@@ -120,8 +131,5 @@ h1 span:nth-of-type(2) {
     margin-top: 20rem;
   }
 }
-
-
-
 
 </style>

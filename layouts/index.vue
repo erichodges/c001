@@ -99,7 +99,7 @@ html {
       margin-left: 0 !important;
     }
 
-@media only screen and (max-width: 59em) {
+@media only screen and (max-width: 60rem) {
   .toolbar-items {    
     visibility: hidden !important;
     display: none;
@@ -107,7 +107,7 @@ html {
   }
 }
 
-@media only screen and (min-width: 59em) {
+@media only screen and (min-width: 60rem) {
   .burger {
     left: -1rem;
     visibility: hidden !important;

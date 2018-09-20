@@ -149,10 +149,42 @@ html {
 
 .div-with-background {
   height: 100vh; 
-  background-image: url('~/static/images/575839.jpg');      
+  /* background-image: url('~/static/images/575839.jpg');       */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+  @media (min-width: 1920px) and (max-width: 2500px){
+    background-image: url('~/static/images/575839-75pc.jpg');
+  }
+
+  @media (min-width: 1400px) and (max-width: 1920px) {
+    background-image: url('~/static/images/575839-1920px.jpg');
+  }
+
+  @media (min-width: 1099px) and (max-width: 1400px) {
+    background-image: url('~/static/images/575839-1400px.jpg');
+  }
+
+  @media (min-width: 900px) and (max-width: 1099px) {
+    background-image: url('~/static/images/575839-1099px.jpg');
+  }
+
+  @media (min-width: 752px) and (max-width: 899px) {
+    background-image: url('~/static/images/575839-900px.jpg');
+  }
+
+  @media (min-width: 400px) and (max-width: 751px) {
+    background-image: url('~/static/images/575839-752px.jpg');
+  }
+
+  @media (min-width: 2500px) and (max-width: 3799px) {
+    background-image: url('~/static/images/575839-75pc.jpg');
+  }
+
+  @media (min-width: 3800px) {
+    background-image: url('~/static/images/575839-100pc.jpg');
+  }
 }
 
 /* this removes all caps from the buttons */

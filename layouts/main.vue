@@ -11,14 +11,8 @@
           <v-btn to="/signin" flat color="blue"><h3>Sign In</h3></v-btn>
           <v-btn to="/signup" flat color="blue"><h3>Sign Up</h3></v-btn>
         </v-toolbar-items>
-      </v-toolbar>
-
-      
-        
+      </v-toolbar>        
           <nuxt />
-        
-      
-
       <v-footer :fixed="fixed" app class="white">
         <span>&copy; 2018</span>
       </v-footer>
